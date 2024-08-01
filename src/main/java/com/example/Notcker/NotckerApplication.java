@@ -8,6 +8,7 @@ public class NotckerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NotckerApplication.class, args);
+
 	}
 
 }
