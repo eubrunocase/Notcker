@@ -2,6 +2,7 @@ package entityes;
 
 import jakarta.persistence.*;
 
+import java.net.ProtocolFamily;
 import java.util.Collection;
 import java.util.Set;
 
@@ -10,8 +11,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
+    private long id;  // id de referência para acesso ao DB
     private String username;
     private String password;
 
@@ -22,8 +22,26 @@ public class User {
 
      private Set<Role> roles;
 
+    public Long getId() {
+        return id;
+    }
 
-    // getters and setters
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public Collection<Object> getRoles() {
+        return null; //attention
+    }
+
+    public ProtocolFamily getName() {
+        return null;   // attention
+    }
+
 
     @Entity
     public class Role {
@@ -34,7 +52,7 @@ public class User {
         @Enumerated(EnumType.STRING)
         private ERole name;
 
-        // getters and setters
+
     }
 
     public enum ERole {
