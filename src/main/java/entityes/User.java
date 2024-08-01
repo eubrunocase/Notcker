@@ -1,3 +1,5 @@
+package entityes;
+
 import jakarta.persistence.*;
 
 import java.util.Set;
