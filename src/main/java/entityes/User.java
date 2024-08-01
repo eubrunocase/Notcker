@@ -2,6 +2,7 @@ package entityes;
 
 import jakarta.persistence.*;
 
+import java.util.Collection;
 import java.util.Set;
 
 @Entity
@@ -20,6 +21,7 @@ public class User {
              inverseJoinColumns = @JoinColumn(name = "role_id"))
 
      private Set<Role> roles;
+
 
     // getters and setters
 
